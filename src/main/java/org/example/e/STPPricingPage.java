@@ -1,4 +1,4 @@
-package org.example.d;
+package org.example.e;
 
 import org.syftkog.web.test.framework.HasDriver;
 import org.syftkog.web.test.framework.Page;
@@ -16,7 +16,7 @@ public class STPPricingPage extends Page<STPPricingPage> {
   }
 
   // ELEMENTS
-  public Link registerNowButton = new Link(this,"Register Now","[href='https://www.regonline.com/STPConS15']");
+  public Link registerNowButton = new Link(this, "Register Now", "[href='https://www.regonline.com/STPConS15']");
 
   // PAGE FUNCTIONS
   public RegOnlinePage clickRegisterNowAndLoadRegistrationPage() {

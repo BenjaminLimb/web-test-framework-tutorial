@@ -1,6 +1,6 @@
-package org.example.e;
+package org.example.g;
 
-import org.example.e.GoogleHomePage;
+import org.example.g.GoogleHomePage;
 import org.syftkog.web.test.framework.Driver;
 import org.syftkog.web.test.framework.TestCaseContext;
 import org.testng.annotations.Test;

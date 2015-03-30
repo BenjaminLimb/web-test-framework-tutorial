@@ -16,7 +16,7 @@ public class Parallelize {
 
   public static Logger LOG = LoggerFactory.getLogger(Parallelize.class);
 
-  @Test
+  @Test(groups="acceptance")
   public void googleSearchTest() {
     WebDriver driver = new FirefoxDriver();
     driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
@@ -41,7 +41,7 @@ public class Parallelize {
     driver.close();
   }
 
-  @Test
+  @Test(groups="regression")
   public void pricingTest() {
     WebDriver driver = new FirefoxDriver();
     driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);

@@ -16,39 +16,39 @@ public class SeleniumPageFactoryExampleTest {
 
   public static Logger LOG = LoggerFactory.getLogger(SeleniumPageFactoryExampleTest.class);
 
-  @Test
+  @Test(groups = "acceptance")
   public void basicExample() {
     WebDriver driver = new FirefoxDriver();
     driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    
+
     GoogleSearchPage googlePage = PageFactory.initElements(driver, GoogleSearchPage.class);
     googlePage.load();
 
     googlePage.searchFor("Software Test Professionals Spring 2015");
     googlePage.clickSearch();
-    
+
     googlePage.clickFirstResult();
-    
+
     STPConferencePage stpPage = PageFactory.initElements(driver, STPConferencePage.class);
     stpPage.assertCorrectURL();
-    
+
     LOG.info("CLICK BROWSER BACK BUTTON");
     driver.navigate().back();
 
     googlePage.assertCorrectURL();
-    
+
     googlePage.clickFirstResult();
-        
+
     stpPage.clickPricingButton();
 
     STPPricingPage stpPricingPage = PageFactory.initElements(driver, STPPricingPage.class);
     stpPricingPage.assertCorrectURL();
-    
+
     RegOnlinePage regOnlinePage = stpPricingPage.clickRegisterNow();
-    
+
     regOnlinePage.assertCorrectURL();
-   
+
     driver.close();
   }
 }

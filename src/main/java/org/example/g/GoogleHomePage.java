@@ -1,4 +1,4 @@
-package org.example.e;
+package org.example.g;
 
 import org.syftkog.web.test.framework.HasDriver;
 import org.syftkog.web.test.framework.Page;
