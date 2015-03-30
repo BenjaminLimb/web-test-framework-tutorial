@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
  *
  * @author benjaminlimb
  */
-public class ApplyFrameworkTest {
+public class PricingTest {
 
-  public static Logger LOG = LoggerFactory.getLogger(ApplyFrameworkTest.class);
+  public static Logger LOG = LoggerFactory.getLogger(PricingTest.class);
 
   @Test(groups = "acceptance")
   public void googleSearchTest() {

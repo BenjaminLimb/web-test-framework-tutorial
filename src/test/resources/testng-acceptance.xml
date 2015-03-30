@@ -15,7 +15,7 @@
             </run>
         </groups>    
         <packages>
-            <package name="org.example.*"/>      
+            <package name="org.example.e.*"/>      
         </packages>
     </test>  
 </suite>

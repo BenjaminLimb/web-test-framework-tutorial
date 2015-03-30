@@ -12,11 +12,11 @@ import org.testng.annotations.Test;
  *
  * @author benjaminlimb
  */
-public class Parallelize {
+public class GoogleSearchTest {
 
-  public static Logger LOG = LoggerFactory.getLogger(Parallelize.class);
+  public static Logger LOG = LoggerFactory.getLogger(GoogleSearchTest.class);
 
-  @Test(groups="acceptance")
+  @Test(groups = "acceptance")
   public void googleSearchTest() {
     WebDriver driver = new FirefoxDriver();
     driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
@@ -37,24 +37,6 @@ public class Parallelize {
     driver.navigate().back();
 
     googlePage.assertCorrectURL();
-
-    driver.close();
-  }
-
-  @Test(groups="regression")
-  public void pricingTest() {
-    WebDriver driver = new FirefoxDriver();
-    driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-    STPConferencePage stpPage = PageFactory.initElements(driver, STPConferencePage.class);
-    stpPage.load();
-    
-    STPPricingPage stpPricingPage = stpPage.clickPricingButton();   
-    stpPricingPage.assertCorrectURL();
-
-    RegOnlinePage regOnlinePage = stpPricingPage.clickRegisterNow();
-    regOnlinePage.assertCorrectURL();
 
     driver.close();
   }

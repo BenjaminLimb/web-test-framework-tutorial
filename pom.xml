@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>ui-automated-tests</artifactId>
-  <name>web-test-framework based UI Testing App</name>
+  <artifactId>web-test-framework-tutorial</artifactId>
+  <name>web-test-framework basedtutorial</name>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
 
@@ -23,7 +23,7 @@
   </properties>
 
   <build>
-    <finalName>ui-automated-tests</finalName>
+    <finalName>web-test-framework-tutorial</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -31,7 +31,7 @@
         <version>2.16</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>${project.build.testOutputDirectory}/testng-acceptance.xml</suiteXmlFile>
+            <suiteXmlFile>${project.build.testOutputDirectory}/testng-regression.xml</suiteXmlFile>                     
           </suiteXmlFiles>
           <properties>
             <property>
